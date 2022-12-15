@@ -1,1 +1,13 @@
-<button type="button" class="btn btn-light">Light</button>
+<ul class="">
+    <li *ngFor="let word of words" class="">
+        <button type="button" class="btn btn-light " (click)= "onSelect(word)">
+            <span class='badge'>
+                {{ word.id }}
+            </span>
+            <span>
+                {{ word.name }}
+            </span>
+        </button>
+    </li>
+</ul>
+

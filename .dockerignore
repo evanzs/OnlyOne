@@ -1,0 +1,6 @@
+**/dist
+**/Dockerfile*
+**/node_modules
+**/.angular
+**/.gitignore
+

@@ -8,14 +8,27 @@ import { WORDS } from "./mockWords";
     styleUrls: ['./server.component.css']
 })
 export class SeverComponent implements OnInit{ 
-    words = WORDS
-    ngOnInit(): void {
-      
-    }
 
-    selectedWord?:Words;
+    CARDS_NUMBER = 5;
+    cont = 0;
+    words = this.selectWords(this.cont * this.CARDS_NUMBER);
+    selectedWord?: Words;
+    ngOnInit(): void {      
+    }
+    
     onSelect(word:Words):void{
+        console.log(word)
         this.selectedWord = word;
+    }
+    onRefresh(){
+        const sliceNumber = this.cont* this.CARDS_NUMBER;
+        this.words=this.selectWords(sliceNumber);
+        this.selectedWord= undefined;
+
+    }
+    selectWords(start:number){
+        this.cont++;
+        return WORDS.slice(start,start+5)
     }
 
 }

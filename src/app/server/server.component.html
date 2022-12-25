@@ -4,16 +4,11 @@
         Atualizar
     </span>
 </button>
-
     <ul *ngIf="!selectedWord" >
         <li *ngFor="let word of words; index as i" class="">
-            <button type="button" class="btn btn-light  text-left container" (click)="onSelect(word)">  
-               
-               
-                <h3>{{i}} - {{ word.name }}</h3>
-                
+            <button type="button" class="btn btn-light  text-left container" (click)="onSelect(word)">                            
+                <h3>{{i}} - {{ word.name }}</h3>                
             </button>
         </li>
     </ul>  
-
 <app-word-detail [word]="selectedWord"></app-word-detail>

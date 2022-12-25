@@ -1,7 +1,7 @@
 version: '2.1'
 
 services:
-  curso-angular:
+  so-uma:
     image: curso-angular
     build: .
     ports:

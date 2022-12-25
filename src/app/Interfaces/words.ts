@@ -1,4 +1,3 @@
-export interface Words{
-    id:number,
+export interface Words{ 
     name:string,
 }

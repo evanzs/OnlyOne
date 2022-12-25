@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  so-uma:
+    image: curso-angular
+    build: .
+    ports:
+      - 8080:80

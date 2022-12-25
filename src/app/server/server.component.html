@@ -1,13 +1,14 @@
-<ul class="">
-    <li *ngFor="let word of words" class="">
-        <button type="button" class="btn btn-light " (click)= "onSelect(word)">
-            <span class='badge'>
-                {{ word.id }}
-            </span>
-            <span>
-                {{ word.name }}
-            </span>
-        </button>
-    </li>
-</ul>
 
+<button type="button" class="btn btn-light container" (click)="onRefresh()">
+    <span class=''>
+        Atualizar
+    </span>
+</button>
+    <ul *ngIf="!selectedWord" >
+        <li *ngFor="let word of words; index as i" class="">
+            <button type="button" class="btn btn-light  text-left container" (click)="onSelect(word)">                            
+                <h3>{{i}} - {{ word.name }}</h3>                
+            </button>
+        </li>
+    </ul>  
+<app-word-detail [word]="selectedWord"></app-word-detail>
